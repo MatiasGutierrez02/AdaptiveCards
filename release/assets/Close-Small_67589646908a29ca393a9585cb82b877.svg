@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="22" height="22" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Close-Small" data-name="Close-Small" clip-path="url(#clip-path)">
+    <path id="Trazado_866" data-name="Trazado 866" d="M0,0,8,8" transform="translate(7 7)" fill="none" stroke="#575757" stroke-width="1.5"/>
+    <path id="Trazado_782" data-name="Trazado 782" d="M0,0,8,8" transform="translate(15 7) rotate(90)" fill="none" stroke="#575757" stroke-width="1.5"/>
+    <rect id="Rectángulo_1061" data-name="Rectángulo 1061" width="22" height="22" fill="none"/>
+  </g>
+</svg>

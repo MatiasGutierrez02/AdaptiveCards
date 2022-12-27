@@ -1,0 +1,43 @@
+@import "~office-ui-fabric-react/dist/sass/References.scss";
+
+.allaccenturelinks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.links {
+  margin-right: 25px;
+  margin-bottom: 25px;
+  max-width: 300px;
+
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  a {
+    text-decoration: none;
+    color: #707070;
+    
+
+    &:hover {
+      color: #2e2e2e;
+    }
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}

@@ -2,143 +2,35 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "my-info-adaptive-card-extension": {
+    "acrossaccenture-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/adaptiveCardExtensions/myInfo/MyInfoAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/myInfo/MyInfoAdaptiveCardExtension.manifest.json"
+          "entrypoint": "./lib/webparts/acrossaccenture/AcrossaccentureWebPart.js",
+          "manifest": "./src/webparts/acrossaccenture/AcrossaccentureWebPart.manifest.json"
         }
       ]
     },
-    "my-chargeability-adaptive-card-extension": {
+    "trending-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/adaptiveCardExtensions/myChargeability/MyChargeabilityAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/myChargeability/MyChargeabilityAdaptiveCardExtension.manifest.json"
+          "entrypoint": "./lib/webparts/trending/TrendingWebPart.js",
+          "manifest": "./src/webparts/trending/TrendingWebPart.manifest.json"
         }
       ]
     },
-    "ethics-and-tickets-adaptive-card-extension": {
+    "allaccenturelinks-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/adaptiveCardExtensions/ethicsAndTickets/EthicsAndTicketsAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/ethicsAndTickets/EthicsAndTicketsAdaptiveCardExtension.manifest.json"
-        }
-      ]
-    },
-    "vacation-balance-adaptive-card-extension": {
-      "components": [
-        {
-          "entrypoint": "./lib/adaptiveCardExtensions/vacationBalance/VacationBalanceAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/vacationBalance/VacationBalanceAdaptiveCardExtension.manifest.json"
-        }
-      ]
-    },
-    "my-strengths-adaptive-card-extension": {
-      "components": [
-        {
-          "entrypoint": "./lib/adaptiveCardExtensions/myStrengths/MyStrengthsAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/myStrengths/MyStrengthsAdaptiveCardExtension.manifest.json"
-        }
-      ]
-    },
-    "pesh-adaptive-card-extension": {
-      "components": [
-        {
-          "entrypoint": "./lib/adaptiveCardExtensions/pesh/PeshAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/pesh/PeshAdaptiveCardExtension.manifest.json"
-        }
-      ]
-    },
-    "scheduling-card-adaptive-card-extension": {
-      "components": [
-        {
-          "entrypoint": "./lib/adaptiveCardExtensions/schedulingCard/SchedulingCardAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/schedulingCard/SchedulingCardAdaptiveCardExtension.manifest.json"
-        }
-      ]
-    },
-    "holdings-adaptive-card-extension": {
-      "components": [
-        {
-          "entrypoint": "./lib/adaptiveCardExtensions/holdings/HoldingsAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/holdings/HoldingsAdaptiveCardExtension.manifest.json"
-        }
-      ]
-    },
-    "my-password-adaptive-card-extension": {
-      "components": [
-        {
-          "entrypoint": "./lib/adaptiveCardExtensions/myPassword/MyPasswordAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/myPassword/MyPasswordAdaptiveCardExtension.manifest.json"
-        }
-      ]
-    },
-    "people-i-lead-adaptive-card-extension": {
-      "components": [
-        {
-          "entrypoint": "./lib/adaptiveCardExtensions/peopleILead/PeopleILeadAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/peopleILead/PeopleILeadAdaptiveCardExtension.manifest.json"
-        }
-      ]
-    },
-    "notification-card-adaptive-card-extension": {
-      "components": [
-        {
-          "entrypoint": "./lib/adaptiveCardExtensions/notificationCard/NotificationCardAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/notificationCard/NotificationCardAdaptiveCardExtension.manifest.json"
-        }
-      ]
-    },
-    "actions-card-adaptive-card-extension": {
-      "components": [
-        {
-          "entrypoint": "./lib/adaptiveCardExtensions/actionsCard/ActionsCardAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/actionsCard/ActionsCardAdaptiveCardExtension.manifest.json"
-        }
-      ]
-    },
-    "office-search-card-adaptive-card-extension": {
-      "components": [
-        {
-          "entrypoint": "./lib/adaptiveCardExtensions/officeSearchCard/OfficeSearchCardAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/officeSearchCard/OfficeSearchCardAdaptiveCardExtension.manifest.json"
-        }
-      ]
-    },
-    "career-sup-adaptive-card-extension": {
-      "components": [
-        {
-          "entrypoint": "./lib/adaptiveCardExtensions/careerSup/CareerSupAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/careerSup/CareerSupAdaptiveCardExtension.manifest.json"
-        }
-      ]
-    },
-    "dashboard-adaptive-card-extension": {
-      "components": [
-        {
-          "entrypoint": "./lib/adaptiveCardExtensions/dashboard/DashboardAdaptiveCardExtension.js",
-          "manifest": "./src/adaptiveCardExtensions/dashboard/DashboardAdaptiveCardExtension.manifest.json"
+          "entrypoint": "./lib/webparts/allaccenturelinks/AllaccenturelinksWebPart.js",
+          "manifest": "./src/webparts/allaccenturelinks/AllaccenturelinksWebPart.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "MyInfoAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/myInfo/loc/{locale}.js",
-    "MyChargeabilityAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/myChargeability/loc/{locale}.js",
-    "EthicsAndTicketsAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/ethicsAndTickets/loc/{locale}.js",
-    "VacationBalanceAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/vacationBalance/loc/{locale}.js",
-    "MyStrengthsAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/myStrengths/loc/{locale}.js",
-    "PeshAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/pesh/loc/{locale}.js",
-    "SchedulingCardAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/schedulingCard/loc/{locale}.js",
-    "HoldingsAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/holdings/loc/{locale}.js",
-    "PeopleILeadAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/peopleILead/loc/{locale}.js",
-    "MyPasswordAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/myPassword/loc/{locale}.js",
-    "NotificationCardAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/notificationCard/loc/{locale}.js",
-    "ActionsCardAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/actionsCard/loc/{locale}.js",
-    "OfficeSearchCardAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/officeSearchCard/loc/{locale}.js",
-    "CareerSupAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/careerSup/loc/{locale}.js",
-    "DashboardAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/dashboard/loc/{locale}.js"
+    "AcrossaccentureWebPartStrings": "lib/webparts/acrossaccenture/loc/{locale}.js",
+    "TrendingWebPartStrings": "lib/webparts/trending/loc/{locale}.js",
+    "AllaccenturelinksWebPartStrings": "lib/webparts/allaccenturelinks/loc/{locale}.js"
   }
 }

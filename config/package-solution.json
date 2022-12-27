@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "viva-adaptive-cards-client-side-solution",
-    "id": "f92e6c54-bb3a-45d0-97d9-85e5578e673c",
+    "name": "webparts-client-side-solution",
+    "id": "8a4a3eb7-45c8-4f4c-b9bc-cc60acfdbe52",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
@@ -12,18 +12,29 @@
       "websiteUrl": "",
       "privacyUrl": "",
       "termsOfUseUrl": "",
-      "mpnId": "Undefined-1.13.1"
+      "mpnId": "Undefined-1.16.0-beta.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "webparts description"
+      },
+      "longDescription": {
+        "default": "webparts description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
     },
     "features": [
       {
-        "title": "viva-adaptive-cards Feature",
-        "description": "The feature that activates elements of the viva-adaptive-cards solution.",
-        "id": "00044d9c-61d6-488a-97a3-fe188572c4a7",
+        "title": "webparts Feature",
+        "description": "The feature that activates elements of the webparts solution.",
+        "id": "f810c8ad-bda7-49bc-92a2-3d8732eb0ed8",
         "version": "1.0.0.0"
       }
     ]
   },
   "paths": {
-    "zippedPackage": "solution/viva-adaptive-cards.sppkg"
+    "zippedPackage": "solution/webparts.sppkg"
   }
 }
