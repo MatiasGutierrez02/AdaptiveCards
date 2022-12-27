@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "viva-adaptive-cards-client-side-solution",
+    "id": "f92e6c54-bb3a-45d0-97d9-85e5578e673c",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.13.1"
+    },
+    "features": [
+      {
+        "title": "viva-adaptive-cards Feature",
+        "description": "The feature that activates elements of the viva-adaptive-cards solution.",
+        "id": "00044d9c-61d6-488a-97a3-fe188572c4a7",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/viva-adaptive-cards.sppkg"
+  }
+}

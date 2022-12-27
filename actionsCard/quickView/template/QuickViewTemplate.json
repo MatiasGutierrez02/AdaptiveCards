@@ -1,0 +1,86 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "$data": "${$root.actions}",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 75,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${formatDateTime(ExpirationDate, 'DD MMMM')}",
+                            "wrap": true,
+                            "weight": "Bolder",
+                            "size": "Default"
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": 33,
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${Subject}",
+                                            "wrap": true,
+                                            "size": "Default"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "spacing": "Small"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAABG0lEQVRYR83Y0Q2CQBBFUf7tSLvWArQmG9B5G68hZIEFZme4yUsEFU6MXwy/braH7VKOcpNBFplKevG2fWwvWyZS95ZBFpkKUlqdYFnIMY7dbdU3opE1w9P2N2QiV3GUgWzGUSRyM44ikLtx1BN5GEc9kG448kS648gD2Q1HR5DdcbQHGYajLchwHLUg03C0hEzH0RzyFDiqIcdLxdEc8hQ4dWrgHI6d7v8nkDY9F46cw+m8lopcwlEasgVH4cgtOApD7sHRke825XEDfbbLL+mBI3ekJ47crtkDR7Vr67j52j1xtPseETiq3Wvxl4zEUTMyA0eryEwcLSKnj4CjcVRDlkfA44foWTgaI2W62kpCSpuJIxlkMdwwfAGdY04Nl4liSwAAAABJRU5ErkJggg==",
+                            "width": "10px",
+                            "height": "10px",
+                            "selectAction": {
+                                "type": "Action.Submit",
+                                "associatedInputs": "none",
+                                "data": {
+                                    "TransactionID": "${TransactionID}"
+                                }
+                            },
+                            "horizontalAlignment": "Right"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Medium",
+            "separator": true
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "You have no Actions at this time. Please, check again later.",
+                            "wrap": true,
+                            "color": "Warning",
+                            "weight": "Bolder",
+                            "$when": "${$root.displayMessage}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
