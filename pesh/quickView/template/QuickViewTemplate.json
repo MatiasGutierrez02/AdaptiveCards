@@ -1,0 +1,64 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921"
+                        }
+                    ]
+                }
+            ],
+            "$when": "${isLoading == true}"
+        },
+        {
+            "type": "ColumnSet",
+            "$data": "${$root.peshItems}",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "50px",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "${imagelight}",
+                            "width": "48px",
+                            "height": "48px",
+                            "horizontalAlignment": "Center"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "$when": "${$root.isLoading == false}"
+                },
+                {
+                    "type": "Column",
+                    "width": 75,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${title}",
+                            "wrap": true,
+                            "weight": "Bolder"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "$when": "${$root.isLoading == false}"
+                }
+            ],
+            "spacing": "Medium",
+            "separator": true,
+            "selectAction": {
+                "type": "Action.OpenUrl",
+                "url": "https://${url}"
+            }
+        }
+    ]
+}

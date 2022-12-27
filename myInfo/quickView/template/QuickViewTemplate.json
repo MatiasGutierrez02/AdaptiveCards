@@ -1,0 +1,196 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921"
+                        }
+                    ]
+                }
+            ],
+            "$when": "${isLoading == true}"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "${profilePicture}",
+                            "size": "Small",
+                            "style": "Person",
+                            "width": "120px",
+                            "height": "120px"
+                        }
+                    ],
+                    "verticalContentAlignment": "Bottom",
+                    "minHeight": "130px"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${displayName}",
+                            "size": "Large",
+                            "weight": "Bolder",
+                            "spacing": "Small",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${standardJobDescr}",
+                            "wrap": true,
+                            "fontType": "Default",
+                            "size": "Default",
+                            "weight": "Bolder",
+                            "color": "Warning"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "ID ${personnelNumber}",
+                            "wrap": true,
+                            "color": "Warning",
+                            "weight": "Bolder"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "spacing": "Padding"
+                }
+            ],
+            "style": "default",
+            "spacing": "None",
+            "separator": true,
+            "$when": "${isLoading == false}"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "My Password",
+                            "size": "Default",
+                            "weight": "Bolder",
+                            "horizontalAlignment": "Center"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Expires in **${passwordDays}** days",
+                            "size": "Small",
+                            "color": "Warning",
+                            "weight": "Bolder",
+                            "horizontalAlignment": "Center"
+                        },
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.OpenUrl",
+                                    "url": "https://in.accenture.com/connectivitysecurity/changing-your-enterprise-password/",
+                                    "title": "Update"
+                                }
+                            ],
+                            "horizontalAlignment": "Right"
+                        }
+                    ],
+                    "spacing": "None"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Chargeability",
+                            "wrap": true,
+                            "size": "Default",
+                            "weight": "Bolder",
+                            "horizontalAlignment": "Center"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${chargeability} %",
+                            "wrap": true,
+                            "weight": "Bolder",
+                            "size": "Default",
+                            "color": "Accent",
+                            "horizontalAlignment": "Center"
+                        }
+                    ],
+                    "spacing": "None"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "My Earned PTO",
+                            "wrap": true,
+                            "size": "Default",
+                            "weight": "Bolder",
+                            "horizontalAlignment": "Center"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "As of ${asOfDate}",
+                            "wrap": true,
+                            "size": "Small",
+                            "weight": "Bolder",
+                            "color": "Warning",
+                            "horizontalAlignment": "Center"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${vacationBalance} \n",
+                            "weight": "Bolder",
+                            "size": "Default",
+                            "horizontalAlignment": "Center",
+                            "spacing": "Small",
+                            "color": "Accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Hours",
+                            "horizontalAlignment": "Center",
+                            "size": "Small",
+                            "weight": "Bolder",
+                            "color": "Warning",
+                            "spacing": "None",
+                            "wrap": true
+                        }
+                    ],
+                    "spacing": "None",
+                    "verticalContentAlignment": "Top",
+                    "horizontalAlignment": "Center"
+                }
+            ],
+            "minHeight": "90px",
+            "style": "default",
+            "separator": true,
+            "spacing": "Large",
+            "$when": "${isLoading == false}"
+        }
+    ],
+    "minHeight": "0px",
+    "backgroundImage": {
+        "verticalAlignment": "Center"
+    }
+}

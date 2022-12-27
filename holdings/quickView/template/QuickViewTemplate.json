@@ -1,0 +1,158 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921"
+                        }
+                    ]
+                }
+            ],
+            "$when": "${isLoading == true}"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "weight": "Default",
+                                            "text": "${symbol}",
+                                            "wrap": true,
+                                            "horizontalAlignment": "Right",
+                                            "size": "Default"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${if(change >= 0, '▲', '▼')} ${formatNumber(change,2)}",
+                                            "wrap": true,
+                                            "horizontalAlignment": "Left"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TextBlock",
+                            "spacing": "None",
+                            "text": "${formatNumber(lastPrice, 2)} USD",
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "size": "Large",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "As of {{DATE(${timestamp})}}, {{TIME(${timestamp})}}",
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "size": "Default"
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "ColumnSet",
+                                            "columns": [
+                                                {
+                                                    "type": "Column",
+                                                    "width": "stretch",
+                                                    "items": [
+                                                        {
+                                                            "type": "TextBlock",
+                                                            "text": "My shares",
+                                                            "wrap": true,
+                                                            "horizontalAlignment": "Center",
+                                                            "size": "Default",
+                                                            "weight": "Default"
+                                                        },
+                                                        {
+                                                            "type": "TextBlock",
+                                                            "text": "${shares}",
+                                                            "wrap": true,
+                                                            "horizontalAlignment": "Center",
+                                                            "size": "Large",
+                                                            "weight": "Bolder",
+                                                            "spacing": "None"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Column",
+                                                    "width": "stretch",
+                                                    "items": [
+                                                        {
+                                                            "type": "TextBlock",
+                                                            "text": "Worth",
+                                                            "wrap": true,
+                                                            "horizontalAlignment": "Center",
+                                                            "size": "Default",
+                                                            "weight": "Default"
+                                                        },
+                                                        {
+                                                            "type": "TextBlock",
+                                                            "text": "${sharesValue} USD",
+                                                            "wrap": true,
+                                                            "horizontalAlignment": "Center",
+                                                            "size": "Large",
+                                                            "weight": "Bolder",
+                                                            "spacing": "None"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "spacing": "Medium"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ],
+            "spacing": "Medium",
+            "$when": "${isLoading == false}"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Manage My Holdings",
+                    "url": "https://myholdings.accenture.com/"
+                }
+            ],
+            "$when": "${isLoading == false}"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "minHeight": "0px"
+}

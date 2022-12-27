@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "2ab5ad1c-4ebf-4840-b26b-91c7c3d7956e",
+  "alias": "MyChargeabilityAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "myChargeability" },
+    "description": { "default": "myChargeability description" },
+    "officeFabricIconFontName": "SharePointLogo",
+    "cardSize": "Medium",
+    "properties": {
+      "title": "myChargeability",
+      "description": "myChargeability description",
+      "iconProperty": "", // Default to sharepointlogo
+      "authMode":  "Primary"
+    }
+  }]
+}

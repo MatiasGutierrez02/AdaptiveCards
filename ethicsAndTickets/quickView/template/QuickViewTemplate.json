@@ -1,0 +1,147 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921",
+                            "$when": "${isLoading == true}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "ACCENTURE SUPPORT\n",
+            "size": "Medium",
+            "weight": "Bolder",
+            "color": "Dark",
+            "$when": "${isLoading == false}",
+            "wrap": true
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "106px",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": " Open Tickets: ",
+                            "wrap": true,
+                            "weight": "Bolder",
+                            "color": "Warning",
+                            "size": "Default"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "wrap": true,
+                            "text": "${openTickets}ㅤ",
+                            "color": "Good",
+                            "weight": "Bolder",
+                            "spacing": "None",
+                            "horizontalAlignment": "Left"
+                        }
+                    ],
+                    "spacing": "None"
+                },
+                {
+                    "type": "Column",
+                    "width": "128px",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Require Attention: ",
+                            "wrap": true,
+                            "weight": "Bolder",
+                            "color": "Warning",
+                            "size": "Default"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${requireAttention}ㅤ",
+                            "wrap": true,
+                            "color": "Attention",
+                            "weight": "Bolder"
+                        }
+                    ]
+                }
+            ],
+            "$when": "${isLoading == false}"
+        },
+        {
+            "type": "TextBlock",
+            "text": "ETHICS & COMPLIANCE",
+            "wrap": true,
+            "separator": true,
+            "spacing": "Large",
+            "color": "Dark",
+            "weight": "Bolder",
+            "size": "Medium",
+            "$when": "${isLoading == false}"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "210px",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Required activities to complete: ",
+                            "wrap": true,
+                            "weight": "Bolder",
+                            "color": "Warning"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${trainingsToComplete}ㅤ",
+                            "wrap": true,
+                            "weight": "Bolder",
+                            "color": "Attention"
+                        }
+                    ]
+                }
+            ],
+            "$when": "${isLoading == false}"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Training and activities are released throughout the fiscal year.",
+            "wrap": true,
+            "spacing": "Medium",
+            "weight": "Bolder",
+            "color": "Warning",
+            "$when": "${isLoading == false}"
+        }
+    ]
+}

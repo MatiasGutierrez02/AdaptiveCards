@@ -1,0 +1,158 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921"
+                        }
+                    ]
+                }
+            ],
+            "$when": "${isLoading == true}"
+        },
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "My calendar",
+            "spacing": "Large",
+            "$when": "${isLoading == false}"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${projectClient}",
+                            "spacing": "Medium",
+                            "size": "Medium",
+                            "horizontalAlignment": "Center",
+                            "weight": "Bolder",
+                            "color": "Warning"
+                        }
+                    ]
+                }
+            ],
+            "$when": "${isLoading == false}"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Project",
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "size": "Medium",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${projectName}",
+                            "wrap": true,
+                            "size": "Default",
+                            "weight": "Bolder",
+                            "color": "Warning",
+                            "horizontalAlignment": "Center"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Large",
+            "$when": "${isLoading == false}"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Roll-Off Date",
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "size": "Medium",
+                            "weight": "Bolder",
+                            "separator": true,
+                            "spacing": "ExtraLarge"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${rollOffDate}",
+                            "wrap": true,
+                            "size": "Default",
+                            "weight": "Bolder",
+                            "color": "Warning",
+                            "horizontalAlignment": "Center"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Large",
+            "separator": true,
+            "$when": "${isLoading == false}"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "First Available Date",
+                            "wrap": true,
+                            "size": "Medium",
+                            "weight": "Bolder",
+                            "horizontalAlignment": "Center"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${firstAvailableDate}",
+                            "wrap": true,
+                            "horizontalAlignment": "Center",
+                            "size": "Default",
+                            "weight": "Bolder",
+                            "color": "Warning"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Large",
+            "separator": true,
+            "$when": "${isLoading == false}"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "See my calendar ",
+                    "url": "https://mysched.accenture.com/me"
+                }
+            ],
+            "spacing": "Large",
+            "$when": "${isLoading == false}"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}

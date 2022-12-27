@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "cc0827c7-1255-44e3-9bc3-263122975a17",
+  "alias": "MyInfoAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "myInfo" },
+    "description": { "default": "Shows employee information." },
+    "iconImageUrl": "https://modernb.akamai.odsp.cdn.office.net/files/sp-client/icn_card_designer_card_afb025ac9293b90e3915192b84c0e56d.svg",
+    "cardSize": "Medium",
+    "properties": {
+      "title": "My Info",
+      "description": "Shows employee information.",
+      "iconProperty":  "", // Default to sharepointlogo
+      "authMode":  "Primary"
+    }
+  }]
+}
